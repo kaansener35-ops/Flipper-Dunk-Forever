@@ -7,13 +7,29 @@ public class ScoreManager : MonoBehaviour
 {
     private int score = 0;
     public TextMeshProUGUI scoreText;
-    
+    public GameObject hoopR;
+    public GameObject hoopL;
+
+    void Start()
+    {
+        hoopR.SetActive(true);
+        hoopL.SetActive(false);
+    }
     public void AddScore()
     {
         score = score + 1;
-        Debug.Log(score);
         scoreText.text = "SCORE: " + score;
+
+        if (hoopR.activeSelf)
+        {
+            hoopR.SetActive(false);
+            hoopL.SetActive(true);
+        }
+        else
+        {
+            hoopL.SetActive(false);
+            hoopR.SetActive(true);
+        }
     }
-    
     
 }
