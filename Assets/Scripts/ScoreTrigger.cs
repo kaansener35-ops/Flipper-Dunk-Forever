@@ -14,4 +14,5 @@ public class ScoreTrigger : MonoBehaviour
             manager.AddScore();
         }
     }
+    
 }

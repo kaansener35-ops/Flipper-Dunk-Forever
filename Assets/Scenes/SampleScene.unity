@@ -229,7 +229,7 @@ Transform:
   m_GameObject: {fileID: 13667079}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.26, y: 4.08, z: 0}
+  m_LocalPosition: {x: -2.35, y: -4.52, z: 0}
   m_LocalScale: {x: 0.76, y: 0.76, z: 0.76}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -466,7 +466,7 @@ GameObject:
   - component: {fileID: 613992388}
   - component: {fileID: 613992392}
   m_Layer: 0
-  m_Name: Pota1
+  m_Name: HoopR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -676,7 +676,7 @@ Transform:
   m_GameObject: {fileID: 613992387}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.55979323, z: 0.82863235, w: 0}
-  m_LocalPosition: {x: 2.8014, y: 0.58047, z: 0.77117}
+  m_LocalPosition: {x: 2.52, y: -0.11, z: 1.05}
   m_LocalScale: {x: 0.9885982, y: 0.20009044, z: 0.9708944}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -888,7 +888,7 @@ GameObject:
   - component: {fileID: 1089620839}
   - component: {fileID: 1089620838}
   m_Layer: 0
-  m_Name: Wall1 (1)
+  m_Name: WallUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1018,7 +1018,7 @@ GameObject:
   - component: {fileID: 1145395393}
   - component: {fileID: 1145395392}
   m_Layer: 0
-  m_Name: Wall2 (1)
+  m_Name: WallL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1148,7 +1148,7 @@ GameObject:
   - component: {fileID: 1263363985}
   - component: {fileID: 1263363984}
   m_Layer: 0
-  m_Name: Wall2
+  m_Name: WallR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1483,6 +1483,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 2013531916}
+  hoopR: {fileID: 613992387}
+  hoopL: {fileID: 2077403560}
 --- !u!4 &1344052913
 Transform:
   m_ObjectHideFlags: 0
@@ -1782,7 +1784,7 @@ GameObject:
   - component: {fileID: 1999073258}
   - component: {fileID: 1999073260}
   m_Layer: 0
-  m_Name: Wall1
+  m_Name: WallD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1934,7 +1936,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 23.1, y: 432.3}
+  m_AnchoredPosition: {x: 23.1, y: 366.9}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2013531916
@@ -2048,7 +2050,7 @@ GameObject:
   - component: {fileID: 2077403562}
   - component: {fileID: 2077403561}
   m_Layer: 0
-  m_Name: Pota2
+  m_Name: HoopL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2293,7 +2295,7 @@ Transform:
   m_GameObject: {fileID: 2077403560}
   serializedVersion: 2
   m_LocalRotation: {x: 0.55976015, y: -0.0060879504, z: 0.009011671, w: 0.82858336}
-  m_LocalPosition: {x: -2.87, y: 3.62, z: 8.33}
+  m_LocalPosition: {x: -2.77, y: 1.91, z: 4.18}
   m_LocalScale: {x: 0.9885982, y: 0.20009044, z: 0.9708944}
   m_ConstrainProportionsScale: 0
   m_Children:
