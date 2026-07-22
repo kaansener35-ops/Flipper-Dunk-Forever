@@ -9,8 +9,6 @@ public class ScoreManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public GameObject hoopR;
     public GameObject hoopL;
-    private bool isMoving = false;
-
     void Start()
     {
         hoopR.SetActive(true);
@@ -36,6 +34,12 @@ public class ScoreManager : MonoBehaviour
             hoopR.GetComponent<HoopMovement>().StartMoving();
             hoopL.GetComponent<HoopMovement>().StartMoving();
         }
+        if (score >= 10)
+        {
+            hoopR.GetComponent<HoopMovement>().StartScaling();
+            hoopL.GetComponent<HoopMovement>().StartScaling();
+        }
     }
+    
     
 }
