@@ -17,7 +17,7 @@ public class HoopMovement : MonoBehaviour
     {
         isScaling = true;
     }
-    void Start()
+    void Awake()
     {
         startPosition = transform.position;
         startScale = transform.localScale;
@@ -35,6 +35,5 @@ public class HoopMovement : MonoBehaviour
         {
             transform.localScale = startScale * (0.65f + Mathf.Sin(Time.time) * 0.35f);
         }
-        
     }
 }

@@ -29,7 +29,7 @@ public class ScoreManager : MonoBehaviour
             hoopL.SetActive(false);
             hoopR.SetActive(true);
         }
-        if (score >= 5)
+        if (score >= 5) 
         {
             hoopR.GetComponent<HoopMovement>().StartMoving();
             hoopL.GetComponent<HoopMovement>().StartMoving();
