@@ -14,20 +14,18 @@ public class FlipperController : MonoBehaviour
 
     void Update()
     { 
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) || Input.GetKey(KeyCode.Space)) 
         {
             JointMotor2D motor = flipperJoint.motor;
             motor.motorSpeed = 650;
             flipperJoint.motor = motor;
         }
-        
-        else 
-        
-        { 
+        else
+        {
             JointMotor2D motor = flipperJoint.motor;
             motor.motorSpeed = -350;
             flipperJoint.motor = motor;
-            }
+        }
     }
 
 }

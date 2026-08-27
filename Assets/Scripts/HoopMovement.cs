@@ -8,6 +8,8 @@ public class HoopMovement : MonoBehaviour
     private Vector3 startScale;
     private bool isMoving = false;
     private bool isScaling = false;
+    public float minY = 2f;
+    public float maxY = 5f;
 
    public void StartMoving()
     {
@@ -19,12 +21,9 @@ public class HoopMovement : MonoBehaviour
     }
     void Awake()
     {
-        startPosition = transform.position;
         startScale = transform.localScale;
 
     }
-
-    // Update is called once per frame
     void Update()
     {
         if(isMoving)
@@ -33,7 +32,29 @@ public class HoopMovement : MonoBehaviour
         }
         if(isScaling)
         {
-            transform.localScale = startScale * (0.65f + Mathf.Sin(Time.time) * 0.35f);
+            transform.localScale = startScale * (0.65f + Mathf.Sin(Time.time) * 0.20f);
         }
     }
+    void OnEnable()
+{
+    float randomY = Random.Range(minY, maxY);
+    Vector3 newPos = new Vector3(transform.position.x, randomY, transform.position.z);
+    transform.position = newPos;
+    startPosition = newPos;
+    isMoving = false; 
+    isScaling = false;
+    transform.localScale = startScale;
+    ScoreManager manager = FindObjectOfType<ScoreManager>();
+    if(manager.chaosMode)
+    {
+    if(Random.value < 0.8f)
+    {
+        isMoving = true;
+    }
+    if(Random.value < 0.7f)
+    {
+        isScaling = true;
+    }
+}
+}
 }

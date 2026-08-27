@@ -2,17 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SocialPlatforms.Impl;
 public class ScoreManager : MonoBehaviour
 {
     private int score = 0;
     public TextMeshProUGUI scoreText;
     public GameObject hoopR;
     public GameObject hoopL;
+    public bool chaosMode;
+    public int chaosThreshold;
     void Start()
     {
         hoopR.SetActive(true);
         hoopL.SetActive(false);
+        chaosThreshold = Random.Range(1, 2);
     }
     public void AddScore()
     {
@@ -29,16 +31,12 @@ public class ScoreManager : MonoBehaviour
             hoopL.SetActive(false);
             hoopR.SetActive(true);
         }
-        if (score >= 5) 
+        if (score >= chaosThreshold)
         {
-            hoopR.GetComponent<HoopMovement>().StartMoving();
-            hoopL.GetComponent<HoopMovement>().StartMoving();
+            chaosMode = true;
+            
         }
-        if (score >= 10)
-        {
-            hoopR.GetComponent<HoopMovement>().StartScaling();
-            hoopL.GetComponent<HoopMovement>().StartScaling();
-        }
+      
     }
     
     
